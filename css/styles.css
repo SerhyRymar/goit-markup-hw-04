@@ -4,6 +4,7 @@
 	--accent-color: #2196f3;
 	--primary-white-color: #ffffff;
 	--accent-section-color: #2f303a;
+	--primary-icon-color: #afb1b8;
 }
 
 body {
@@ -48,12 +49,13 @@ img {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
-/* ---------------HEADER--------------- */
+/* ------------------------------------HEADER------------------------------------ */
 .header {
 	background-color: var(--primary-white-color);
 	padding-top: 24px;
 	padding-bottom: 25px;
 	border-bottom: 1px solid #ececec;
+	justify-content: center;
 }
 .header-link {
 	margin-right: 93px;
@@ -87,7 +89,10 @@ img {
 .header-conect-item:not(:last-child) {
 	margin-right: 50px;
 }
-
+.header-conect-item {
+	background: #f5f4fa;
+	border-radius: 4px;
+}
 .logo-web {
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
@@ -124,6 +129,21 @@ img {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--second-text-color);
+	display: flex;
+}
+.header-contact-mail {
+	display: flex;
+	width: 16px;
+	height: 12px;
+	margin-right: 10px;
+	justify-content: center;
+}
+.header-contact-tel {
+	display: flex;
+	width: 10px;
+	height: 16px;
+	margin-right: 10px;
+	justify-content: center;
 }
 
 /* --------------------------PAGE-STUDIO------------------------ */
@@ -199,6 +219,16 @@ img {
 	margin-right: 30px;
 	max-width: 270px;
 }
+.main-section-container {
+	width: 270px;
+	height: 120px;
+	background: #f5f4fa;
+	border-radius: 4px;
+	margin-bottom: 30px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
 .main-list {
 	font-weight: 700;
 	font-size: 14px;
@@ -212,16 +242,6 @@ img {
 	color: var(--second-text-color);
 
 	margin-top: 10px;
-}
-.main-section-icon {
-	display: flex;
-	position: absolute;
-	width: 270px;
-	height: 120px;
-	left: 215px;
-	top: 774px;
-	background: #f5f4fa;
-	border-radius: 4px;
 }
 .main-product {
 	font-weight: 700;
@@ -299,8 +319,59 @@ img {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	background-color: #2196f3;
-	display: block;
+	background-color: var(--primary-white-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.team-social-icon {
+	fill: var(--primary-icon-color);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+	background-color: var(--accent-color);
+}
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
+	fill: var(--primary-white-color);
+}
+
+.clients {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
+	color: var(--primary-text-color);
+	margin-bottom: 50px;
+}
+.clients-logo {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+.clients-logo-item {
+	border: 1px solid var(--primary-icon-color);
+	border-radius: 4px;
+}
+.clients-logo-link {
+	width: 170px;
+	height: 92px;
+	background-color: var(--primary-white-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.clients-logo-icon {
+	fill: var(--primary-icon-color);
+}
+.clients-logo-item:hover,
+.clients-logo-item:focus {
+	border: 1px solid var(--accent-color);
+}
+
+.clients-logo-link:hover .clients-logo-icon,
+.clients-logo-link:focus .clients-logo-icon {
+	fill: var(--accent-color);
 }
 /* -----------------------FOOTER--------------------------- */
 
@@ -312,11 +383,16 @@ img {
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
+.footer-conteiner {
+	display: flex;
+	align-items: baseline;
+}
 .footer-logo {
-	display: inline-block;
+	display: block;
 	margin-bottom: 20px;
 }
 .footer-adress {
+	display: block;
 	font-size: 14px;
 	line-height: 1.7;
 	color: var(--primary-white-color);
@@ -336,6 +412,46 @@ img {
 	font-size: 26px;
 	line-height: 1.2;
 	color: var(--primary-white-color);
+}
+.footer-join-us {
+	display: block;
+	margin-left: 70px;
+}
+.join-us {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--primary-white-color);
+	margin-bottom: 20px;
+}
+.footer-social {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.footer-social-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer-social-icon {
+	fill: var(--primary-white-color);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+	background-color: var(--accent-color);
+}
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+	fill: var(--primary-white-color);
 }
 /* --------------------------PAGE-PORTFOLIO------------------------ */
 .btn {
