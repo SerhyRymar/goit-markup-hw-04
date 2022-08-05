@@ -37,7 +37,7 @@ ul {
 	padding-left: 15px;
 	margin: 0 auto;
 
-	outline: 2px solid red;
+	/* outline: 2px solid red; */
 }
 img {
 	display: block;
@@ -113,16 +113,13 @@ img {
 .contact:focus {
 	color: var(--accent-color);
 }
-.header-conect-container {
+
+.header-conect {
 	display: flex;
-	align-content: center;
-	background-color: antiquewhite;
-	margin-left: 318px;
+	align-items: center;
+	margin-left: auto;
 }
-.header-conect-item {
-	display: flex;
-	align-content: center;
-}
+
 .header-conect-item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -133,18 +130,31 @@ img {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--second-text-color);
+	margin-left: 10px;
 
 	display: flex;
 	align-items: center;
 }
-.header-contact-mail {
-	margin: 0;
-	padding: 0;
-	display: flex;
 
-	fill: var(--primary-icon-color);
+.header-contact-mail {
+	width: 16px;
+	height: 12px;
+	margin-right: 10px;
+	fill: currentColor;
 }
-.header-contact-mail:hover {
+
+.header-contact-mail:hover,
+.header-contact-mail:focus {
+	fill: currentColor;
+}
+.header-contact-tel {
+	width: 10px;
+	height: 16px;
+	margin-right: 10px;
+	fill: currentColor;
+}
+.header-contact-tel:hover,
+.header-contact-tel:focus {
 	fill: currentColor;
 }
 /* --------------------------PAGE-STUDIO------------------------ */
@@ -336,7 +346,11 @@ img {
 .team-social-link:focus .team-social-icon {
 	fill: var(--primary-white-color);
 }
-
+.clients-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .clients {
 	font-weight: 700;
 	font-size: 36px;
@@ -347,22 +361,19 @@ img {
 }
 .clients-logo {
 	display: flex;
-	justify-content: center;
 	gap: 30px;
 }
 .clients-logo-item {
 	border: 1px solid var(--primary-icon-color);
 	border-radius: 4px;
-	justify-content: center;
-	align-items: center;
-	display: flex;
 }
 .clients-logo-link {
 	background-color: var(--primary-white-color);
 	display: flex;
-	width: 174px;
-	height: 96px;
+	width: 170px;
+	height: 92px;
 	align-items: center;
+	border-radius: 4px;
 }
 .clients-logo-icon {
 	fill: var(--primary-icon-color);
@@ -400,7 +411,11 @@ img {
 	line-height: 1.7;
 	color: var(--primary-white-color);
 }
+.address-list {
+	display: block;
+}
 .address-list-item {
+	display: flex;
 	margin-bottom: 9px;
 }
 .footer-contact {
